@@ -1,16 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+
 import { 
   StyleSheet,
-  Text,
-  View 
+  SafeAreaView,
+  View,
+  Text
 } from 'react-native';
+
+import { Login } from "./src/pages/Login";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>App em desenvolvimento!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Login />
+    </SafeAreaView>
   );
 }
 
@@ -19,6 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
 });
