@@ -13,6 +13,8 @@ import {
 
 import { Button } from "../components/Button";
 
+import fonts from '../styles/fonts';
+
 export function Login(){
     return(
         <SafeAreaView style={styles.container}>
@@ -28,8 +30,8 @@ export function Login(){
                     style={styles.input}
                     placeholder="Senha"
                 />
-                <TouchableOpacity style={styles.textButton}>
-                    <Text>
+                <TouchableOpacity>
+                    <Text style={styles.textButton}>
                         Recuperar senha
                     </Text>
                 </TouchableOpacity>
@@ -52,6 +54,7 @@ const styles = StyleSheet.create({
     },
     header: {
         fontSize: 32,
+        fontFamily: fonts.heading,
         marginTop: Platform.OS === "android" ? 60 : 0,
         textAlign: "center",
     },
@@ -64,14 +67,12 @@ const styles = StyleSheet.create({
         textAlign: "left",
         color:"darkgrey",
         fontSize: 17,
+        fontFamily: fonts.complement,
         marginBottom: 20,
         padding: 10,
     },
-    text: {
-        marginTop: 15,
-        fontSize: 13,
-    },
     textButton: {
         marginBottom: 20,
+        fontFamily: fonts.complement,
     },
 });
