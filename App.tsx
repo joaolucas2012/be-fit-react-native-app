@@ -1,26 +1,22 @@
 import React from 'react';
+import AppLoading from "expo-app-loading";
 
 import { 
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
 
-import AppLoading from "expo-app-loading";
-
+import {Inter_600SemiBold} from '@expo-google-fonts/inter';
 import { 
   useFonts,
   Montserrat_700Bold,
   Montserrat_400Regular,
   Montserrat_300Light
 } from '@expo-google-fonts/montserrat';
-import {
-  Inter_600SemiBold
-} from '@expo-google-fonts/inter';
 
 import { Login } from "./src/pages/Login";
 
 export default function App() {
-
   const [ fontsLoaded ] = useFonts({
     Montserrat_700Bold,
     Montserrat_400Regular,
