@@ -8,6 +8,7 @@ import {
     Dimensions,
 } from "react-native";
 
+import fonts from '../styles/fonts';
 interface ButtonProps extends TouchableOpacityProps{
     title: string;
 };
@@ -39,6 +40,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: "white",
         fontSize: 16,
-        // fontFamily: fonts.heading
+        fontFamily: fonts.complement
     },
 });
