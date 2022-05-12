@@ -8,7 +8,9 @@ import {
     Platform,
     TextInput,
     Dimensions,
+    Keyboard,
     TouchableOpacity,
+    TouchableWithoutFeedback
 } from "react-native";
 
 import { Button } from "../components/Button";
@@ -19,27 +21,33 @@ import colors from '../styles/colors';
 export function Login(){
     return(
         <SafeAreaView style={styles.container}>
-            <Text style={styles.header}>
-                BE FIT
-            </Text>
-            <View style={styles.content}>
-                <TextInput 
-                    style={styles.input}
-                    placeholder="Usuário"
-                />
-                <TextInput 
-                    style={styles.input}
-                    placeholder="Senha"
-                />
-                <TouchableOpacity>
-                    <Text style={styles.textButton}>
-                        Recuperar senha
+            <TouchableWithoutFeedback
+                onPress={Keyboard.dismiss}
+            >
+                <View>
+                    <Text style={styles.header}>
+                        BE FIT
                     </Text>
-                </TouchableOpacity>
-                <Button 
-                    title="ENTRAR"
-                />
-            </View>
+                    <View style={styles.content}>
+                        <TextInput 
+                            style={styles.input}
+                            placeholder="Usuário"
+                        />
+                        <TextInput 
+                            style={styles.input}
+                            placeholder="Senha"
+                        />
+                        <TouchableOpacity>
+                            <Text style={styles.textButton}>
+                                Recuperar senha
+                            </Text>
+                        </TouchableOpacity>
+                        <Button 
+                            title="ENTRAR"
+                        />
+                    </View>
+                </View>
+            </TouchableWithoutFeedback>
         </SafeAreaView>
     );
 }
