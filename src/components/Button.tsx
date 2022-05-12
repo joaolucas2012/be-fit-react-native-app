@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import fonts from '../styles/fonts';
+import colors from '../styles/colors';
 interface ButtonProps extends TouchableOpacityProps{
     title: string;
 };
@@ -29,7 +30,7 @@ export function Button({title, ...rest}:ButtonProps){
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: "#565656",
+        backgroundColor: colors.black,
         width: Dimensions.get('window').width * 0.80,
         textAlign: "center",
         justifyContent: "center",
@@ -38,8 +39,8 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     buttonText: {
-        color: "white",
-        fontSize: 16,
+        color: colors.white,
+        fontSize: 18,
         fontFamily: fonts.complement
     },
 });

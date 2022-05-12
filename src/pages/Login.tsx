@@ -14,6 +14,7 @@ import {
 import { Button } from "../components/Button";
 
 import fonts from '../styles/fonts';
+import colors from '../styles/colors';
 
 export function Login(){
     return(
@@ -56,17 +57,18 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontFamily: fonts.heading,
         marginTop: Platform.OS === "android" ? 60 : 0,
-        textAlign: "center",
+        textAlign: "left",
+        color: colors.heading,
     },
     input: {
         width: Dimensions.get('window').width * 0.80,
         borderWidth: 1,
-        borderColor: "darkgrey",
-        backgroundColor: "lightgrey",
+        borderColor: colors.lightgrey,
+        backgroundColor: colors.lightgrey,
         borderRadius: 10,
         textAlign: "left",
-        color:"darkgrey",
-        fontSize: 17,
+        color: colors.text,
+        fontSize: 12,
         fontFamily: fonts.complement,
         marginBottom: 20,
         padding: 10,
@@ -74,5 +76,8 @@ const styles = StyleSheet.create({
     textButton: {
         marginBottom: 20,
         fontFamily: fonts.complement,
+        fontSize: 12,
+        color: colors.text,
+        marginLeft: 10,
     },
 });
