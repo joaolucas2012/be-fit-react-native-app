@@ -3,13 +3,35 @@ import React from 'react';
 import { 
   StyleSheet,
   SafeAreaView,
-  View,
-  Text
 } from 'react-native';
+
+import AppLoading from "expo-app-loading";
+
+import { 
+  useFonts,
+  Montserrat_700Bold,
+  Montserrat_400Regular,
+  Montserrat_300Light
+} from '@expo-google-fonts/montserrat';
+import {
+  Inter_600SemiBold
+} from '@expo-google-fonts/inter';
 
 import { Login } from "./src/pages/Login";
 
 export default function App() {
+
+  const [ fontsLoaded ] = useFonts({
+    Montserrat_700Bold,
+    Montserrat_400Regular,
+    Montserrat_300Light,
+    Inter_600SemiBold
+  }); 
+
+  if(!fontsLoaded) return (
+    <AppLoading/>
+  );
+
   return (
     <SafeAreaView style={styles.container}>
       <Login />
