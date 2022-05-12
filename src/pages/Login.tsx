@@ -57,8 +57,8 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontFamily: fonts.heading,
         marginTop: Platform.OS === "android" ? 60 : 0,
-        textAlign: "left",
-        color: colors.heading,
+        textAlign: "center",
+        color: colors.black,
     },
     input: {
         width: Dimensions.get('window').width * 0.80,

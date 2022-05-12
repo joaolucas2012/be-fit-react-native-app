@@ -30,7 +30,7 @@ export function Button({title, ...rest}:ButtonProps){
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: colors.black,
+        backgroundColor: colors.primary,
         width: Dimensions.get('window').width * 0.80,
         textAlign: "center",
         justifyContent: "center",
@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: colors.white,
         fontSize: 18,
-        fontFamily: fonts.complement
+        fontFamily: fonts.complement,
     },
 });
