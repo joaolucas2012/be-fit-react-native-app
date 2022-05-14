@@ -10,15 +10,17 @@ import {Inter_600SemiBold} from '@expo-google-fonts/inter';
 import { 
   useFonts,
   Montserrat_700Bold,
+  Montserrat_500Medium,
   Montserrat_400Regular,
   Montserrat_300Light
 } from '@expo-google-fonts/montserrat';
 
-import { Login } from "./src/pages/Login";
+import { HomeStudent } from "./src/pages/HomeStudent";
 
 export default function App() {
   const [ fontsLoaded ] = useFonts({
     Montserrat_700Bold,
+    Montserrat_500Medium,
     Montserrat_400Regular,
     Montserrat_300Light,
     Inter_600SemiBold
@@ -30,7 +32,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Login />
+      <HomeStudent />
     </SafeAreaView>
   );
 }
