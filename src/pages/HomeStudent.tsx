@@ -21,8 +21,12 @@ import time from "../assets/time.png";
 import pushups from "../assets/pushups.png";
 import running from "../assets/running.png";
 import arrow from "../assets/arrow.png";
+import home from "../assets/home.png";
+import chat from "../assets/chat.png";
+import progress from "../assets/progress.png";
 
 import { TrainingCardButton } from "../components/TrainingCardButton";
+import { IconButton } from "../components/IconButton";
 
 export function HomeStudent(){
     const trainingData = {
@@ -158,6 +162,21 @@ export function HomeStudent(){
                         />
                     </View>
                 </TouchableOpacity>
+                <View style={styles.iconsFooter}>
+                    <IconButton 
+                        icon={home}
+                        title="Home"
+                        isActive={true}
+                    />
+                    <IconButton 
+                        icon={chat}
+                        title="Chat"
+                    />
+                    <IconButton 
+                        icon={progress}
+                        title="Progresso"
+                    />
+                </View>
             </View>
         </SafeAreaView>
     );
@@ -293,9 +312,8 @@ const styles = StyleSheet.create({
         width: "90%",
         paddingVertical: 10,
         paddingHorizontal: 25,
-        position: "relative",
         marginLeft: 20,
-        marginBottom: 55,
+        marginBottom: 25,
         flexDirection: "row",
         justifyContent: "space-between",
     },
@@ -328,5 +346,17 @@ const styles = StyleSheet.create({
         height: 17,
         marginLeft: 20,
         marginTop: 5,
+    },
+    iconsFooter: {
+        backgroundColor: colors.white,
+        paddingHorizontal: 20,
+        paddingBottom: 20,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderTopStartRadius: 20,
+        borderTopEndRadius: 20,
+        position: "relative",
+        height: 80,
     },
 });
