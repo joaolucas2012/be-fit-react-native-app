@@ -14,15 +14,40 @@ import {
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 import gymweight from "../assets/gymweight.png";
+import dumbbell from "../assets/dumbbell.png";
+import time from "../assets/time.png";
+import pushups from "../assets/pushups.png";
+import running from "../assets/running.png";
+
+import { TrainingCardButton } from "../components/TrainingCardButton";
 
 export function HomeStudent(){
-    const weekDays = [
-        "Segunda-feira    ",
-        "Terça-feira    ",
-        "Quarta-feira     ",
-        "Quinta-feira     ",
-        "Sexta-feira      "
-    ];
+    const trainingData = {
+        day_1:
+        {
+            title: "Quarta-feira",
+            photo: {dumbbell},
+            name: "Nome do treino",
+            icon: {time},
+            duration: "1h15min",
+        },
+        day_2:
+        {
+            title: "Quinta-feira",
+            photo: {pushups},
+            name: "Nome do treino",
+            icon: {time},
+            duration: "1h15min",
+        },
+        day_3:
+        {
+            title: "Sexta-feira",
+            photo: {running},
+            name: "Nome do treino",
+            icon: {time},
+            duration: "1h15min",
+        },
+    };
 
     return(
         <SafeAreaView style={styles.container}>
@@ -30,7 +55,7 @@ export function HomeStudent(){
                 BE FIT
             </Text>
             <View style={styles.content}>
-                <View>
+                <View style={styles.texts}>
                     <Text style={styles.greeting}>
                         Olá Lina,
                     </Text>
@@ -67,9 +92,15 @@ export function HomeStudent(){
                     Próximos exercícios
                 </Text>
                 <FlatList 
-                    data={weekDays}
+                    data={Object.keys(trainingData)}
                     renderItem={({item}) => (
-                        <Text>{item}</Text>
+                        <TrainingCardButton 
+                            title="Quarta-feira"
+                            photo={dumbbell}
+                            name="Nome do treino"
+                            icon={time}
+                            duration="1h15min"
+                        />
                     )}
                     horizontal
                     showsHorizontalScrollIndicator={false}
@@ -84,20 +115,23 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         width: '100%',
+        backgroundColor: colors.lightgrey,
     },
     content: {
         flex: 1,
         textAlign: "left",
         justifyContent: "space-around",
-        marginHorizontal: 25,
     },
     header: {
         fontSize: 24,
         fontFamily: fonts.heading,
-        marginTop: Platform.OS === "android" ? 60 : 0,
+        marginTop: Platform.OS === "android" ? 40 : 0,
         marginBottom: 15,
         textAlign: "center",
         color: colors.black,
+    },
+    texts: {
+        marginLeft: 20,
     },
     greeting: {
         fontFamily: fonts.complement,
@@ -111,6 +145,15 @@ const styles = StyleSheet.create({
         lineHeight: 33,
         marginBottom: 5,
     },
+    card: {
+        backgroundColor: colors.primary,
+        flexDirection: "row",
+        height: "35%",
+        borderRadius: 20,
+        paddingLeft: 20,
+        marginVertical: 10,
+        marginHorizontal: 25,
+    },
     dayCard: {
         backgroundColor: colors.lightgreen,
         width: "35%",
@@ -119,15 +162,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: 12,
-    },
-    card: {
-        backgroundColor: colors.primary,
-        flexDirection: "row",
-        width: "100%",
-        height: "35%",
-        borderRadius: 20,
-        paddingLeft: 20,
-        marginVertical: 10,
     },
     day: {
         color: colors.white,
@@ -145,6 +179,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         textAlign: "left",
         marginVertical: 10,
+        marginLeft: 20,
     },
     subtitle: {
         color: colors.white,
@@ -159,6 +194,7 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         alignItems: "center",
         justifyContent: "center",
+        marginBottom: 10,
     },
     leftView: {
         flex: 1,
@@ -173,6 +209,7 @@ const styles = StyleSheet.create({
         width: "77%",
     },
     weekDaysList: {
-
+        height: "50%",
+        marginLeft: 20,
     },
 });

@@ -26,12 +26,10 @@ export function TrainingCardButton({
     name,
     icon,
     duration,
-    ...rest
 }:TrainingProps){
     return(
         <TouchableOpacity 
             style={styles.container}
-            {...rest}
         >
             <Text style={styles.title}>
                 {title}
@@ -45,14 +43,16 @@ export function TrainingCardButton({
                 <Text style={styles.TrainingName}>
                     {name}
                 </Text>
-                <Image 
-                    source={icon}
-                    style={styles.icon}
-                    resizeMode="contain"
-                />
-                <Text style={styles.durationText}>
-                    {duration}
-                </Text>
+                <View style={styles.footer}>
+                    <Image 
+                        source={icon}
+                        style={styles.icon}
+                        resizeMode="contain"
+                    />
+                    <Text style={styles.durationText}>
+                        {duration}
+                    </Text>
+                </View>
             </View>
         </TouchableOpacity>
     );
@@ -71,27 +71,36 @@ const styles = StyleSheet.create({
     },
     cardContent: {
         flex: 1,
-        width: 120,
-        height: 114,
+        width: 145,
         borderRadius: 20,
-        backgroundColor: colors.white,
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: colors.secondary,
         textAlign: 'left',
+        marginRight: 25,
+        paddingLeft: 10,
+        paddingVertical: 20,
     },
     image: {
-        width: 30,
-        height: 30,
+        width: "30%",
+        height: "30%",
+        position: "relative",
     },
     TrainingName: {
         fontSize: 14,
         fontFamily: fonts.title,
         color: colors.heading,
         lineHeight: 15.4,
+        width: "80%",
+        marginVertical: 10,
+    },
+    footer: {
+        flexDirection: "row",
+        position: "relative",
+        width: "80%",
     },
     icon: {
-        width: 10,
-        height: 10,
+        width: 13,
+        height: 13,
+        marginRight: 5,
     },
     durationText: {
         fontFamily: fonts.body,
