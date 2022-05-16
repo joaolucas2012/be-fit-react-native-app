@@ -10,4 +10,5 @@ export default{
     lightgrey: '#E5E7EA',
     blackgreen: '#4F8C67',
     lightgreen: '#8DC9A5',
+    shinegreen: '#B2DBC5',
 };
