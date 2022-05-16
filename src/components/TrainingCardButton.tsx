@@ -30,6 +30,7 @@ export function TrainingCardButton({
     return(
         <TouchableOpacity 
             style={styles.container}
+            activeOpacity={0.7}
         >
             <Text style={styles.title}>
                 {title}
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     },
     cardContent: {
         flex: 1,
-        width: 145,
+        width: 135,
         borderRadius: 20,
         backgroundColor: colors.secondary,
         textAlign: 'left',

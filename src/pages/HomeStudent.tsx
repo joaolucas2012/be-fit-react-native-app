@@ -8,16 +8,19 @@ import {
     FlatList,
     TouchableOpacity,
     Platform,
+    Dimensions,
     StyleSheet
 } from "react-native";
 
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 import gymweight from "../assets/gymweight.png";
+import play from "../assets/play.png";
 import dumbbell from "../assets/dumbbell.png";
 import time from "../assets/time.png";
 import pushups from "../assets/pushups.png";
 import running from "../assets/running.png";
+import arrow from "../assets/arrow.png";
 
 import { TrainingCardButton } from "../components/TrainingCardButton";
 
@@ -63,7 +66,10 @@ export function HomeStudent(){
                         Bora treinar
                     </Text>
                 </View>
-                <View style={styles.card}>
+                <TouchableOpacity
+                    style={styles.dailyTrainingCard}
+                    activeOpacity={0.7}
+                >
                     <View style={styles.leftView}>
                         <View style={styles.dayCard}>
                             <Text style={styles.day}>
@@ -78,6 +84,11 @@ export function HomeStudent(){
                             5 exercícios    
                         </Text>
                         <View style={styles.durationCard}>
+                            <Image 
+                                style={styles.playIcon}
+                                source={play}
+                                resizeMode="contain"
+                            />
                             <Text style={styles.day}>
                                 40 min
                             </Text>
@@ -87,7 +98,7 @@ export function HomeStudent(){
                         source={gymweight} 
                         style={styles.image}
                     />
-                </View>
+                </TouchableOpacity>
                 <Text style={styles.title}>
                     Próximos exercícios
                 </Text>
@@ -106,6 +117,47 @@ export function HomeStudent(){
                     showsHorizontalScrollIndicator={false}
                     contentContainerStyle={styles.weekDaysList}
                 />
+                <View style={styles.classes}>
+                        <Text style={styles.title}>
+                            Novas aulas
+                        </Text>
+                        <TouchableOpacity 
+                            style={styles.seeClassesButton}
+                            activeOpacity={0.7}
+                        >
+                            <Text style={styles.seeClassesButtonText}>
+                                Ver todas
+                            </Text>
+                        </TouchableOpacity>
+                </View>
+                <TouchableOpacity 
+                    style={styles.showTrainingView}
+                    activeOpacity={0.7}
+                >
+                    <View>
+                        <Text style={styles.classTitle}>
+                            Funcional
+                        </Text>
+                        <Text style={styles.classDescription}>
+                        Agachamento com peso
+                        </Text>
+                    </View>
+                    <View style={styles.classDuration}>
+                        <Image 
+                            style={styles.timeIcon}
+                            source={time}
+                            resizeMode="contain"
+                        />
+                        <Text style={styles.classDurationText}>
+                            15min
+                        </Text>
+                        <Image 
+                            style={styles.arrowIcon}
+                            source={arrow}
+                            resizeMode="contain"
+                        />
+                    </View>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     );
@@ -120,7 +172,6 @@ const styles = StyleSheet.create({
     content: {
         flex: 1,
         textAlign: "left",
-        justifyContent: "space-around",
     },
     header: {
         fontSize: 24,
@@ -145,10 +196,10 @@ const styles = StyleSheet.create({
         lineHeight: 33,
         marginBottom: 5,
     },
-    card: {
+    dailyTrainingCard: {
         backgroundColor: colors.primary,
         flexDirection: "row",
-        height: "35%",
+        height: Dimensions.get("window").height * 0.27,
         borderRadius: 20,
         paddingLeft: 20,
         marginVertical: 10,
@@ -189,12 +240,16 @@ const styles = StyleSheet.create({
     },
     durationCard: {
         backgroundColor: colors.blackgreen,
+        flexDirection: "row",
         width: "30%",
-        height: "10%",
+        height: "11%",
         borderRadius: 15,
         alignItems: "center",
         justifyContent: "center",
-        marginBottom: 10,
+        marginVertical: 5, 
+    },
+    playIcon: {
+        marginRight: 5,
     },
     leftView: {
         flex: 1,
@@ -209,7 +264,69 @@ const styles = StyleSheet.create({
         width: "77%",
     },
     weekDaysList: {
-        height: "50%",
+        height: Dimensions.get('window').width * 0.40,
         marginLeft: 20,
+    },
+    classes: {
+        flexDirection: "row",
+        width: "90%",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginLeft: 20,
+    },
+    seeClassesButton: {
+        width: "25%",
+        borderRadius: 10,
+        backgroundColor: colors.shinegreen,
+        marginRight: 10,
+    },
+    seeClassesButtonText: {
+        color: colors.primary,
+        fontFamily: fonts.body,
+        fontSize: 10,
+        textAlign: "center",
+        padding: 5,
+    },
+    showTrainingView: {
+        backgroundColor: colors.white,
+        borderRadius: 10,
+        width: "90%",
+        paddingVertical: 10,
+        paddingHorizontal: 25,
+        position: "relative",
+        marginLeft: 20,
+        marginBottom: 55,
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+    classTitle: {
+        fontFamily: fonts.heading,
+        fontSize: 14,
+        color: colors.heading,
+    },
+    classDescription: {
+        fontFamily: fonts.body,
+        fontSize: 10,
+        color: colors.heading,
+        lineHeight: 20,
+    },
+    timeIcon: {
+        width: 13,
+        height: 13,
+        marginRight: 5,
+    },
+    classDurationText: {
+        fontFamily: fonts.body,
+        fontSize: 12,
+        color: colors.heading,
+    },
+    classDuration: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    arrowIcon: {
+        height: 17,
+        marginLeft: 20,
+        marginTop: 5,
     },
 });
