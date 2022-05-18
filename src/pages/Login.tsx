@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         color: colors.black,
     },
     input: {
-        width: Dimensions.get('window').width * 0.80,
+        width: Dimensions.get('window').width * 0.85,
         borderWidth: 1,
         borderColor: colors.lightgrey,
         backgroundColor: colors.lightgrey,
