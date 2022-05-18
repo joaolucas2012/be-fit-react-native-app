@@ -49,7 +49,6 @@ export function WeightAndHeight(
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         width: '95%',
     },
     bodyMetricsText: {
