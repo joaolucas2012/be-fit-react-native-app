@@ -15,7 +15,9 @@ import {
   Montserrat_300Light
 } from '@expo-google-fonts/montserrat';
 
-import { HomeStudent } from "./src/pages/HomeStudent";
+import { Progress } from "./src/pages/Progress";
+// import { HomeStudent } from "./src/pages/HomeStudent";
+// import { Login } from "./src/pages/Login";
 
 export default function App() {
   const [ fontsLoaded ] = useFonts({
@@ -32,7 +34,9 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <HomeStudent />
+      {/* <HomeStudent /> */}
+      <Progress />
+      {/* <Login /> */}
     </SafeAreaView>
   );
 }
