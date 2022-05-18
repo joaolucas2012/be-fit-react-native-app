@@ -4,6 +4,7 @@ import {
     View,
     Text,
     Image,
+    Platform,
     StyleSheet,
 } from "react-native";
 
@@ -15,7 +16,7 @@ interface metricsProps{
     title: string;
 };
 
-export function Metrics(
+export function SectionHeader(
     {title}:metricsProps)
 {
     return(
@@ -33,10 +34,9 @@ export function Metrics(
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.white,
         flexDirection: "row",
-        justifyContent: "center",
-        textAlign: "left",
+        alignItems: "center",
+        marginTop: Platform.OS === "android" ? 60 : 0,
     },
     icon: {
         marginRight: 20,
