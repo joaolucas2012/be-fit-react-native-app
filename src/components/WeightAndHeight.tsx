@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
     },
     header: {
         fontFamily: fonts.complement,
-        fontSize: 18,
+        fontSize: 14,
         color: colors.black,
-        lineHeight: 40,
+        lineHeight: 35,
     },
     weightView: {
         flexDirection: "row",
