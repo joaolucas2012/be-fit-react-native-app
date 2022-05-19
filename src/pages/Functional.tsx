@@ -3,13 +3,11 @@ import React from "react";
 import {
     SafeAreaView,
     View,
-    Text,
     FlatList,
     StyleSheet
 } from "react-native";
 
 import colors from "../styles/colors";
-import fonts from "../styles/fonts";
 
 import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 import { VideoCard } from "../components/VideoCard";
