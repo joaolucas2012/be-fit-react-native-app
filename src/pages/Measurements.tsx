@@ -12,7 +12,7 @@ import fonts from "../styles/fonts";
 import { SectionHeader } from "../components/SectionHeader";
 import { WeightAndHeight } from "../components/WeightAndHeight";
 import { Circumferences } from "../components/Circumferences";
-import { IconsFooter } from "../components/IconsFooter";
+import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 
 export function Measurements(){
     return(
@@ -39,7 +39,7 @@ export function Measurements(){
                 />
             </View>
             <View style={styles.footer}>
-                <IconsFooter />
+                <StudentsIconsFooter />
             </View>
         </View>
     );
