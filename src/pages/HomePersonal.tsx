@@ -4,11 +4,7 @@ import {
     SafeAreaView,
     View,
     Text,
-    Image,
-    FlatList,
-    TouchableOpacity,
     Platform,
-    Dimensions,
     StyleSheet
 } from "react-native";
 
@@ -17,7 +13,8 @@ import fonts from "../styles/fonts";
 
 import { SeeAllButton } from "../components/SeeAllButton";
 import { InformationCard } from "../components/InformationCard";
-import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
+import { Button } from "../components/Button";
+import { PersonalIconsFooter } from "../components/PersonalIconsFooter";
 
 export function HomePersonal(){
     return(
@@ -27,7 +24,7 @@ export function HomePersonal(){
             </Text>
             <View style={styles.content}>
                 <Text style={styles.greeting}>
-                    Olá Pedro,
+                    Olá Pedro!
                 </Text>
                 <View style={styles.classMatesHeader}>
                     <Text style={styles.textBold}>
@@ -35,20 +32,27 @@ export function HomePersonal(){
                     </Text>
                     <SeeAllButton />
                 </View>
-                <InformationCard
-                    name="Pedro Silva"
-                    goal="Objetivo: resistência"
-                />
-                <InformationCard
-                    name="Camila Pereira"
-                    goal="Objetivo: resistência"
-                />
-                <InformationCard
-                    name="Bárbara Sales"
-                    goal="Objetivo: resistência"
+                <View>
+                    <InformationCard
+                        name="Pedro Silva"
+                        goal="Objetivo: resistência"
+                    />
+                    <InformationCard
+                        name="Camila Pereira"
+                        goal="Objetivo: resistência"
+                    />
+                    <InformationCard
+                        name="Bárbara Sales"
+                        goal="Objetivo: resistência"
+                    />
+                </View>
+            </View>
+            <View style={styles.buttonView}>
+                <Button 
+                    title="Adicionar aluno"
                 />
             </View>
-            <StudentsIconsFooter />
+            <PersonalIconsFooter />
         </SafeAreaView>
     );
 };
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontFamily: fonts.heading,
         marginTop: Platform.OS === "android" ? 40 : 0,
-        marginBottom: 15,
+        marginBottom: 30,
         textAlign: "center",
         color: colors.black,
     },
@@ -76,16 +80,21 @@ const styles = StyleSheet.create({
         fontFamily: fonts.complement,
         fontSize: 14,
         textAlign: "left",
+        marginBottom: 10,
     },
     classMatesHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginVertical: 20,
+        marginVertical: 25,
     },
     textBold: {
         fontFamily: fonts.heading,
-        fontSize: 18,
+        fontSize: 17,
         color: colors.black,
+    },
+    buttonView: {
+        alignItems: "center",
+        marginBottom: 40,
     },
 });
