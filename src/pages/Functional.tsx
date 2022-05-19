@@ -11,7 +11,7 @@ import {
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
-import { IconsFooter } from "../components/IconsFooter";
+import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 import { VideoCard } from "../components/VideoCard";
 import { SectionHeader } from "../components/SectionHeader";
 
@@ -33,7 +33,7 @@ export function Functional(){
                 />
             </View>
             <View>
-                <IconsFooter />
+                <StudentsIconsFooter />
             </View>
         </SafeAreaView>
     );

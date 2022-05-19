@@ -11,7 +11,7 @@ import {
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
-import { IconsFooter } from "../components/IconsFooter";
+import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 import { ExerciseCard } from "../components/ExerciseCard";
 import { SectionHeader } from "../components/SectionHeader";
 
@@ -64,7 +64,7 @@ export function Classes(){
                 />
             </View>
             <View>
-                <IconsFooter />
+                <StudentsIconsFooter />
             </View>
         </SafeAreaView>
     );

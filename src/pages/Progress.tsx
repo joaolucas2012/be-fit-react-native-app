@@ -13,7 +13,7 @@ import fonts from "../styles/fonts";
 
 import { DateCard } from "../components/DateCard";
 import { Button } from "../components/Button";
-import { IconsFooter } from "../components/IconsFooter";
+import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 
 export function Progress(){
     return(
@@ -35,7 +35,7 @@ export function Progress(){
                         title="Adicionar Medidas"
                     />
                 </View>
-                <IconsFooter />
+                <StudentsIconsFooter />
             </View>
         </SafeAreaView>
     );

@@ -16,6 +16,8 @@ import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
 import { SeeAllButton } from "../components/SeeAllButton";
+import { InformationCard } from "../components/InformationCard";
+import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 
 export function HomePersonal(){
     return(
@@ -33,7 +35,20 @@ export function HomePersonal(){
                     </Text>
                     <SeeAllButton />
                 </View>
+                <InformationCard
+                    name="Pedro Silva"
+                    goal="Objetivo: resistência"
+                />
+                <InformationCard
+                    name="Camila Pereira"
+                    goal="Objetivo: resistência"
+                />
+                <InformationCard
+                    name="Bárbara Sales"
+                    goal="Objetivo: resistência"
+                />
             </View>
+            <StudentsIconsFooter />
         </SafeAreaView>
     );
 };
@@ -66,7 +81,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginTop: 20,
+        marginVertical: 20,
     },
     textBold: {
         fontFamily: fonts.heading,

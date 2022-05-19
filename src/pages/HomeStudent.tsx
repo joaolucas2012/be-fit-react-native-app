@@ -24,7 +24,7 @@ import arrow from "../assets/arrow.png";
 
 import { TrainingCardButton } from "../components/TrainingCardButton";
 import { SeeAllButton } from "../components/SeeAllButton";
-import { IconsFooter } from "../components/IconsFooter";
+import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 
 export function HomeStudent(){
     const trainingData = {
@@ -153,7 +153,7 @@ export function HomeStudent(){
                         />
                     </View>
                 </TouchableOpacity>
-                <IconsFooter />
+                <StudentsIconsFooter />
             </View>
         </SafeAreaView>
     );

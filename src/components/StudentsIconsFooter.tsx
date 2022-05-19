@@ -8,11 +8,11 @@ import {
 import home from "../assets/home.png";
 import chat from "../assets/chat.png";
 import progress from "../assets/progress.png";
-import { IconButton } from "../components/IconButton";
+import { IconButton } from "./IconButton";
 
 import colors from "../styles/colors";
 
-export function IconsFooter(){
+export function StudentsIconsFooter(){
     return(
         <View style={styles.iconsFooter}>
             <IconButton 
@@ -24,10 +24,12 @@ export function IconsFooter(){
                 icon={chat}
                 title="Chat"
             />
-            <IconButton 
-                icon={progress}
-                title="Progresso"
-            />
+            <View>
+                <IconButton 
+                    icon={progress}
+                    title="Progresso"
+                />
+            </View>
         </View>
     );
 ;}

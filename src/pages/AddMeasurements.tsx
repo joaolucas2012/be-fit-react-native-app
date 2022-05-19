@@ -11,7 +11,7 @@ import fonts from "../styles/fonts";
 import { SectionHeader } from "../components/SectionHeader";
 import { AddWeightAndHeight } from "../components/AddWeightAndHeight";
 import { AddCircumferences } from "../components/AddCircumferences";
-import { IconsFooter } from "../components/IconsFooter";
+import { StudentsIconsFooter } from "../components/StudentsIconsFooter";
 import { Button } from "../components/Button";
 
 export function AddMeasurements(){
@@ -30,7 +30,7 @@ export function AddMeasurements(){
                 </View>
             </View>
             <View style={styles.footer}>
-                <IconsFooter />
+                <StudentsIconsFooter />
             </View>
         </View>
     );

@@ -15,7 +15,8 @@ import {
   Montserrat_300Light
 } from '@expo-google-fonts/montserrat';
 
-import { Functional } from "./src/pages/Functional";
+import { HomePersonal } from "./src/pages/HomePersonal";
+// import { Functional } from "./src/pages/Functional";
 // import { Classes } from "./src/pages/Classes";
 // import { AddMeasurements } from "./src/pages/AddMeasurements";
 // import { Measurements } from "./src/pages/Measurements";
@@ -44,7 +45,8 @@ export default function App() {
       {/* <Measurements /> */}
       {/* <AddMeasurements /> */}
       {/* <Classes /> */}
-      <Functional />
+      {/* <Functional /> */}
+      <HomePersonal />
     </SafeAreaView>
   );
 }
