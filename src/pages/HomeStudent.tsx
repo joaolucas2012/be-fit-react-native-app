@@ -23,6 +23,7 @@ import running from "../assets/running.png";
 import arrow from "../assets/arrow.png";
 
 import { TrainingCardButton } from "../components/TrainingCardButton";
+import { SeeAllButton } from "../components/SeeAllButton";
 import { IconsFooter } from "../components/IconsFooter";
 
 export function HomeStudent(){
@@ -122,14 +123,7 @@ export function HomeStudent(){
                         <Text style={styles.title}>
                             Novas aulas
                         </Text>
-                        <TouchableOpacity 
-                            style={styles.seeClassesButton}
-                            activeOpacity={0.7}
-                        >
-                            <Text style={styles.seeClassesButtonText}>
-                                Ver todas
-                            </Text>
-                        </TouchableOpacity>
+                        <SeeAllButton />
                 </View>
                 <TouchableOpacity 
                     style={styles.showTrainingView}
@@ -275,19 +269,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         marginLeft: 20,
-    },
-    seeClassesButton: {
-        width: "25%",
-        borderRadius: 10,
-        backgroundColor: colors.shinegreen,
-        marginRight: 10,
-    },
-    seeClassesButtonText: {
-        color: colors.primary,
-        fontFamily: fonts.body,
-        fontSize: 10,
-        textAlign: "center",
-        padding: 5,
     },
     showTrainingView: {
         backgroundColor: colors.white,
