@@ -5,7 +5,6 @@ import {
     View,
     Text,
     Platform,
-    Dimensions,
     StyleSheet
 } from "react-native";
 
