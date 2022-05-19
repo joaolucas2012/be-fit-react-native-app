@@ -15,7 +15,8 @@ import {
   Montserrat_300Light
 } from '@expo-google-fonts/montserrat';
 
-import { AddMeasurements } from "./src/pages/AddMeasurements";
+import { Classes } from "./src/pages/Classes";
+// import { AddMeasurements } from "./src/pages/AddMeasurements";
 // import { Measurements } from "./src/pages/Measurements";
 // import { Progress } from "./src/pages/Progress";
 // import { HomeStudent } from "./src/pages/HomeStudent";
@@ -40,7 +41,8 @@ export default function App() {
       {/* <Progress /> */}
       {/* <Login /> */}
       {/* <Measurements /> */}
-      <AddMeasurements />
+      {/* <AddMeasurements /> */}
+      <Classes />
     </SafeAreaView>
   );
 }
