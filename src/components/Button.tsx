@@ -31,7 +31,7 @@ export function Button({title, ...rest}:ButtonProps){
 const styles = StyleSheet.create({
     button: {
         backgroundColor: colors.primary,
-        width: Dimensions.get('window').width * 0.80,
+        width: Dimensions.get('window').width * 0.85,
         textAlign: "center",
         justifyContent: "center",
         alignItems: "center",
