@@ -15,7 +15,11 @@ import {
   Montserrat_300Light
 } from '@expo-google-fonts/montserrat';
 
-import { HomePersonal } from "./src/pages/HomePersonal";
+import { ClassmateData } from "./src/pages/ClassmateData";
+// import { DailyTraining } from "./src/pages/DailyTraining";
+// import { Trainings } from "./src/pages/Trainings";
+// import { Classmates } from "./src/pages/Classmates";
+// import { HomePersonal } from "./src/pages/HomePersonal";
 // import { Functional } from "./src/pages/Functional";
 // import { Classes } from "./src/pages/Classes";
 // import { AddMeasurements } from "./src/pages/AddMeasurements";
@@ -46,7 +50,11 @@ export default function App() {
       {/* <AddMeasurements /> */}
       {/* <Classes /> */}
       {/* <Functional /> */}
-      <HomePersonal />
+      {/* <HomePersonal /> */}
+      {/* <Classmates /> */}
+      {/* <Trainings /> */}
+      {/* <DailyTraining /> */}
+      <ClassmateData />
     </SafeAreaView>
   );
 }
